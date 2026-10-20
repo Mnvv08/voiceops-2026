@@ -1,0 +1,7 @@
+.env
+.venv/
+venv/
+__pycache__/
+.cache/
+Capstone_Project_Dataset_FTTT_2026/
+*.zip
