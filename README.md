@@ -20,9 +20,15 @@ python run.py --audio_dir ./test_audio --out_dir ./outputs
 ```
 Saves per file: `<name>.json` (transcript, reply, retrieved chunks, tool calls) and `<name>_reply.wav`.
 
+## Live demo (record your voice)
+```bash
+streamlit run app.py
+```
+
 ## Evaluate Step 1 vs Step 2
 ```bash
-python -m src.evaluate
+python -m src.evaluate               # Step 1 vs Step 2 on practice/questions.csv
+python -m src.eval_conversations    # multi-turn practice conversations
 ```
 
 ## Layout
@@ -30,4 +36,4 @@ python -m src.evaluate
 - `src/agent.py` modes: `prompt` (Step 1), `rag` (Step 2), `chat` (Step 3 with tools)
 - `src/tools_adapter.py` wraps the provided `lookup_order` / `create_ticket`
 - `src/voice.py` Gnani STT -> agent -> Gnani TTS
-- `run.py` batch runner
+- `run.py` batch runner · `app.py` Streamlit demo · `REPORT_TEMPLATE.md` report outline
